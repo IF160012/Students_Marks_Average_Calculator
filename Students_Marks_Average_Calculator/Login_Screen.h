@@ -795,6 +795,10 @@ private: System::Void button1_Click(System::Object^  sender, System::EventArgs^ 
 	Application::Exit();
 }
 private: System::Void comboBox4_SelectedIndexChanged(System::Object^  sender, System::EventArgs^  e) {
+	if (comboBox4->Text == "Spring")
+	{
+		MessageBox::Show("Work in progress");
+	}
 	if (progressBar1->Value == 80)
 	{
 		progressBar1->Value += 20;
@@ -1004,33 +1008,94 @@ private: System::Void textBox12_KeyPress(System::Object^  sender, System::Window
 private: System::Void button5_Click(System::Object^  sender, System::EventArgs^  e) {
 	int InfLab;
 	InfLab = System::Convert::ToInt32(textBox1->Text);
+	if (InfLab > 10 )
+	{
+		MessageBox::Show("Informatics Labarotory mark wrong input. Input must be less or equal to 10");
+	}
 	int InfMid;
 	InfMid = System::Convert::ToInt32(textBox2->Text);
+	if (InfMid > 10 )
+	{
+		MessageBox::Show("Informatics Mid-Term mark wrong input. Input must be less or equal to 10");
+	}
 	int InfExa;
 	InfExa = System::Convert::ToInt32(textBox3->Text);
+	if (InfExa > 10)
+	{
+		MessageBox::Show("Informatics Exam mark wrong input. Input must be less or equal to 10");
+	}
 	int MathTest1;
 	MathTest1 = System::Convert::ToInt32(textBox5->Text);
+	if (MathTest1 > 10)
+	{
+		MessageBox::Show("Math Test 1 mark wrong input. Input must be less or equal to 10");
+	}
 	int MathTest2;
 	MathTest2 = System::Convert::ToInt32(textBox6->Text);
+	if (MathTest2 > 10)
+	{
+		MessageBox::Show("Math Test 2 mark wrong input. Input must be less or equal to 10");
+	}
 	int MathMid;
 	MathMid = System::Convert::ToInt32(textBox7->Text);
+	if (MathMid > 10)
+	{
+		MessageBox::Show("Math Mid-Term mark wrong input. Input must be less or equal to 10");
+	}
 	int MathExam;
 	MathExam = System::Convert::ToInt32(textBox8->Text);
+	if (MathExam > 10)
+	{
+		MessageBox::Show("Math Exam mark wrong input. Input must be less or equal to 10");
+	}
 	int ProgLab;
 	ProgLab = System::Convert::ToInt32(textBox10->Text);
+	if (ProgLab > 10)
+	{
+		MessageBox::Show("Programming Labarotory mark wrong input. Input must be less or equal to 10");
+	}
 	int ProgMid;
 	ProgMid = System::Convert::ToInt32(textBox11->Text);
+	if (ProgMid > 10)
+	{
+		MessageBox::Show("Programming Mid-Term mark wrong input. Input must be less or equal to 10");
+	}
 	int ProgExam;
 	ProgExam = System::Convert::ToInt32(textBox12->Text);
+	if (ProgExam > 10)
+	{
+		MessageBox::Show("Programming Exam mark wrong input. Input must be less or equal to 10");
+	}
+	if(InfLab <= 10 && InfMid <=10 && InfExa <= 10)
+	{
 	int InfFinal;
 	InfFinal = (InfLab*0.3) + (InfMid*0.2) + (InfExa*0.5);
-	int MathFinal;
-	MathFinal = (MathTest1*0.125) + (MathTest2*0.125) + (MathMid*0.25) + (MathExam*0.5);
-	int ProgFinal;
-	ProgFinal = (ProgLab*0.3) + (ProgMid*0.2) + (ProgExam*0.5);
 	textBox4->Text = System::Convert::ToString(InfFinal);
-	textBox9->Text = System::Convert::ToString(MathFinal);
-	textBox13->Text = System::Convert::ToString(ProgFinal);
+	}
+	else
+	{
+		MessageBox::Show("Bad input calculation of Informatics Final Grade is not aviable");
+	}
+	if (MathTest1 <= 10 && MathTest2 <= 10 && MathMid <= 10 && MathExam <= 10)
+	{
+		int MathFinal;
+		MathFinal = (MathTest1*0.125) + (MathTest2*0.125) + (MathMid*0.25) + (MathExam*0.5);
+		textBox9->Text = System::Convert::ToString(MathFinal);
+	}
+	else
+	{
+		MessageBox::Show("Bad input calculation of Math final grade is not aviable");
+	}
+	if (ProgLab <= 10 && ProgMid <= 10 && ProgExam <= 10)
+	{
+		int ProgFinal;
+		ProgFinal = (ProgLab*0.3) + (ProgMid*0.2) + (ProgExam*0.5);
+		textBox13->Text = System::Convert::ToString(ProgFinal);
+	}
+	else
+	{
+		MessageBox::Show("Bad input calculation of Programming Final Grade is not aviable");
+	}
 }
 };
 }

@@ -23,6 +23,7 @@ namespace Students_Marks_Average_Calculator {
 			//
 			//TODO: Add the constructor code here
 			//
+			MessageBox::Show("Program was made by: Mantas Silanskas, IF160012");
 		}
 
 	protected:
