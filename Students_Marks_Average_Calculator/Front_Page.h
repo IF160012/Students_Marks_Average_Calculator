@@ -37,10 +37,16 @@ namespace Students_Marks_Average_Calculator {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::Label^  label1;
+	private: System::Windows::Forms::Label^  Form1_Kaunas_Label;
 	protected:
-	private: System::Windows::Forms::Button^  button1;
-	private: System::Windows::Forms::Button^  button2;
+
+	private: System::Windows::Forms::Button^  Form1_Next_Button;
+
+	private: System::Windows::Forms::Button^  Form1_Exit_Button;
+
+	protected:
+
+
 
 	private:
 		/// <summary>
@@ -56,41 +62,41 @@ namespace Students_Marks_Average_Calculator {
 		void InitializeComponent(void)
 		{
 			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(Front_Page::typeid));
-			this->label1 = (gcnew System::Windows::Forms::Label());
-			this->button1 = (gcnew System::Windows::Forms::Button());
-			this->button2 = (gcnew System::Windows::Forms::Button());
+			this->Form1_Kaunas_Label = (gcnew System::Windows::Forms::Label());
+			this->Form1_Next_Button = (gcnew System::Windows::Forms::Button());
+			this->Form1_Exit_Button = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
-			// label1
+			// Form1_Kaunas_Label
 			// 
-			this->label1->AutoSize = true;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->Form1_Kaunas_Label->AutoSize = true;
+			this->Form1_Kaunas_Label->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(186)));
-			this->label1->Location = System::Drawing::Point(1235, 620);
-			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(135, 24);
-			this->label1->TabIndex = 0;
-			this->label1->Text = L"Kaunas, 2017";
+			this->Form1_Kaunas_Label->Location = System::Drawing::Point(1235, 620);
+			this->Form1_Kaunas_Label->Name = L"Form1_Kaunas_Label";
+			this->Form1_Kaunas_Label->Size = System::Drawing::Size(135, 24);
+			this->Form1_Kaunas_Label->TabIndex = 0;
+			this->Form1_Kaunas_Label->Text = L"Kaunas, 2017";
 			// 
-			// button1
+			// Form1_Next_Button
 			// 
-			this->button1->Location = System::Drawing::Point(1290, 12);
-			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(80, 30);
-			this->button1->TabIndex = 1;
-			this->button1->Text = L"Next";
-			this->button1->UseVisualStyleBackColor = true;
-			this->button1->Click += gcnew System::EventHandler(this, &Front_Page::button1_Click);
+			this->Form1_Next_Button->Location = System::Drawing::Point(1290, 12);
+			this->Form1_Next_Button->Name = L"Form1_Next_Button";
+			this->Form1_Next_Button->Size = System::Drawing::Size(80, 30);
+			this->Form1_Next_Button->TabIndex = 1;
+			this->Form1_Next_Button->Text = L"Next";
+			this->Form1_Next_Button->UseVisualStyleBackColor = true;
+			this->Form1_Next_Button->Click += gcnew System::EventHandler(this, &Front_Page::Form1_Next_Button_Click);
 			// 
-			// button2
+			// Form1_Exit_Button
 			// 
-			this->button2->Location = System::Drawing::Point(1290, 48);
-			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(80, 30);
-			this->button2->TabIndex = 2;
-			this->button2->Text = L"Exit";
-			this->button2->UseVisualStyleBackColor = true;
-			this->button2->Click += gcnew System::EventHandler(this, &Front_Page::button2_Click);
+			this->Form1_Exit_Button->Location = System::Drawing::Point(1290, 48);
+			this->Form1_Exit_Button->Name = L"Form1_Exit_Button";
+			this->Form1_Exit_Button->Size = System::Drawing::Size(80, 30);
+			this->Form1_Exit_Button->TabIndex = 2;
+			this->Form1_Exit_Button->Text = L"Exit";
+			this->Form1_Exit_Button->UseVisualStyleBackColor = true;
+			this->Form1_Exit_Button->Click += gcnew System::EventHandler(this, &Front_Page::Form1_Exit_Button_Click);
 			// 
 			// Front_Page
 			// 
@@ -100,9 +106,9 @@ namespace Students_Marks_Average_Calculator {
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Center;
 			this->ClientSize = System::Drawing::Size(1382, 653);
-			this->Controls->Add(this->button2);
-			this->Controls->Add(this->button1);
-			this->Controls->Add(this->label1);
+			this->Controls->Add(this->Form1_Exit_Button);
+			this->Controls->Add(this->Form1_Next_Button);
+			this->Controls->Add(this->Form1_Kaunas_Label);
 			this->DoubleBuffered = true;
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedDialog;
 			this->Name = L"Front_Page";
@@ -112,13 +118,13 @@ namespace Students_Marks_Average_Calculator {
 
 		}
 #pragma endregion
-	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
+private: System::Void Form1_Next_Button_Click(System::Object^  sender, System::EventArgs^  e) {
 		Login_Screen ^ Login = gcnew Login_Screen(this);
 		Login->Show();
 		this->Hide();
 	}
-	private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {
-		Application::Exit();
-	}
-	};
+private: System::Void Form1_Exit_Button_Click(System::Object^  sender, System::EventArgs^  e) {
+	Application::Exit();
+}
+};
 }

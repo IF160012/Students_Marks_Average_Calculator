@@ -1,6 +1,9 @@
 #pragma once
 
+
 #include <ctype.h>
+#include <string>
+
 
 namespace Students_Marks_Average_Calculator {
 
@@ -9,6 +12,7 @@ namespace Students_Marks_Average_Calculator {
 	using namespace System::Collections;
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
+	using namespace std;
 	using namespace System::Drawing;
 
 	/// <summary>
@@ -38,56 +42,110 @@ namespace Students_Marks_Average_Calculator {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::Label^  label1;
+	private: System::Windows::Forms::Label^  Faculty_Label;
 	protected:
-	private: System::Windows::Forms::ComboBox^  comboBox1;
-	private: System::Windows::Forms::Label^  label2;
-	private: System::Windows::Forms::ComboBox^  comboBox2;
-	private: System::Windows::Forms::Label^  label3;
-	private: System::Windows::Forms::ComboBox^  comboBox3;
-	private: System::Windows::Forms::Label^  label4;
+
+	private: System::Windows::Forms::ComboBox^  Form2_University_ComboBox;
+	protected:
+
+	private: System::Windows::Forms::Label^  Form2_University_Label;
+	private: System::Windows::Forms::ComboBox^  Form2_Faculty_ComboBox;
+	private: System::Windows::Forms::Label^  Course_Label;
+
+
+
+	private: System::Windows::Forms::ComboBox^  Form2_Course_ComboBox;
+	private: System::Windows::Forms::Label^  Semester_Label;
+
+
+
 	private: System::Windows::Forms::ComboBox^  comboBox4;
-	private: System::Windows::Forms::Button^  button1;
+	private: System::Windows::Forms::Button^  Exit_Button;
 
-	private: System::Windows::Forms::Button^  button3;
+	private: System::Windows::Forms::Button^  Back_Button;
 
-	private: System::Windows::Forms::ProgressBar^  progressBar1;
-	private: System::Windows::Forms::Label^  label5;
-	private: System::Windows::Forms::Button^  button4;
-	private: System::Windows::Forms::Label^  label6;
-	private: System::Windows::Forms::ComboBox^  comboBox5;
-	private: System::Windows::Forms::Label^  label7;
-	private: System::Windows::Forms::TextBox^  textBox1;
-	private: System::Windows::Forms::TextBox^  textBox2;
-	private: System::Windows::Forms::TextBox^  textBox3;
-	private: System::Windows::Forms::Label^  label8;
-	private: System::Windows::Forms::Label^  label9;
-	private: System::Windows::Forms::Label^  label10;
-	private: System::Windows::Forms::TextBox^  textBox4;
-	private: System::Windows::Forms::Label^  label11;
-	private: System::Windows::Forms::Button^  button5;
-	private: System::Windows::Forms::Label^  label12;
 
-	private: System::Windows::Forms::Label^  label13;
-	private: System::Windows::Forms::Button^  button6;
-	private: System::Windows::Forms::Label^  label14;
-	private: System::Windows::Forms::Label^  label15;
-	private: System::Windows::Forms::Label^  label16;
-	private: System::Windows::Forms::Label^  label17;
-	private: System::Windows::Forms::Label^  label18;
-	private: System::Windows::Forms::TextBox^  textBox5;
-	private: System::Windows::Forms::TextBox^  textBox6;
-	private: System::Windows::Forms::TextBox^  textBox7;
-	private: System::Windows::Forms::TextBox^  textBox8;
-	private: System::Windows::Forms::TextBox^  textBox9;
-	private: System::Windows::Forms::Label^  label19;
-	private: System::Windows::Forms::Label^  label20;
-	private: System::Windows::Forms::Label^  label21;
-	private: System::Windows::Forms::TextBox^  textBox10;
-	private: System::Windows::Forms::TextBox^  textBox11;
-	private: System::Windows::Forms::TextBox^  textBox12;
-	private: System::Windows::Forms::TextBox^  textBox13;
-	private: System::Windows::Forms::Label^  label22;
+	private: System::Windows::Forms::ProgressBar^  Form2_DefaultInformation_ProgressBar;
+	private: System::Windows::Forms::Label^  Lectures_List;
+
+
+
+	private: System::Windows::Forms::Button^  Right_Information_Button;
+
+	private: System::Windows::Forms::Label^  Right_Information;
+
+
+	private: System::Windows::Forms::ComboBox^  Form2_Studies_ComboBox;
+	private: System::Windows::Forms::Label^  Studies_Label;
+
+
+	private: System::Windows::Forms::TextBox^  Informatics_Laboratory_Grade;
+	private: System::Windows::Forms::TextBox^  Informatics_Mid_Term_Grade;
+	private: System::Windows::Forms::TextBox^  Informatics_Exam_Grade;
+
+
+
+	private: System::Windows::Forms::Label^  Informatics_Laboratory_Label;
+
+	private: System::Windows::Forms::Label^  Informatics_Mid_Term_Label;
+
+	private: System::Windows::Forms::Label^  Informatics_Exam_Label;
+	private: System::Windows::Forms::TextBox^  Informatics_Final_Grade;
+
+
+
+
+	private: System::Windows::Forms::Label^  Informatics_Final_Grade_Label;
+
+	private: System::Windows::Forms::Button^  Calculate_Grades_Button;
+
+	private: System::Windows::Forms::Label^  Calculate_Grades;
+
+	private: System::Windows::Forms::Label^  Right_Lectures;
+	private: System::Windows::Forms::Button^  Right_Lectures_Button;
+	private: System::Windows::Forms::Label^  Math_Test1_Label;
+
+	private: System::Windows::Forms::Label^  Math_Test2_Label;
+	private: System::Windows::Forms::Label^  Math_Mid_Term_Label;
+	private: System::Windows::Forms::Label^  Math_Final_Grade_Label;
+
+
+
+
+
+
+
+
+
+	private: System::Windows::Forms::Label^  Math_Exam_Label;
+	private: System::Windows::Forms::TextBox^  Math_Test1_Grade;
+	private: System::Windows::Forms::TextBox^  Math_Test2_Grade;
+	private: System::Windows::Forms::TextBox^  Math_Mid_Term_Grade;
+	private: System::Windows::Forms::TextBox^  Math_Exam_Grade;
+	private: System::Windows::Forms::TextBox^  Math_Final_Grade;
+	private: System::Windows::Forms::Label^  Programming_Laboratory_Label;
+	private: System::Windows::Forms::Label^  Programming_Mid_Term_Label;
+private: System::Windows::Forms::Label^  Programming_Exam_Label;
+private: System::Windows::Forms::TextBox^  Programming_Laboratory_Grade;
+private: System::Windows::Forms::TextBox^  Programming_Mid_Term_Grade;
+private: System::Windows::Forms::TextBox^  Programming_Exam_Grade;
+private: System::Windows::Forms::TextBox^  Programming_Final_Grade;
+
+
+
+
+
+
+
+
+
+
+
+
+
+private: System::Windows::Forms::Label^  Programming_Final_Grade_Label;
+
+
 
 
 
@@ -104,135 +162,135 @@ namespace Students_Marks_Average_Calculator {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			this->label1 = (gcnew System::Windows::Forms::Label());
-			this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
-			this->label2 = (gcnew System::Windows::Forms::Label());
-			this->comboBox2 = (gcnew System::Windows::Forms::ComboBox());
-			this->label3 = (gcnew System::Windows::Forms::Label());
-			this->comboBox3 = (gcnew System::Windows::Forms::ComboBox());
-			this->label4 = (gcnew System::Windows::Forms::Label());
+			this->Faculty_Label = (gcnew System::Windows::Forms::Label());
+			this->Form2_University_ComboBox = (gcnew System::Windows::Forms::ComboBox());
+			this->Form2_University_Label = (gcnew System::Windows::Forms::Label());
+			this->Form2_Faculty_ComboBox = (gcnew System::Windows::Forms::ComboBox());
+			this->Course_Label = (gcnew System::Windows::Forms::Label());
+			this->Form2_Course_ComboBox = (gcnew System::Windows::Forms::ComboBox());
+			this->Semester_Label = (gcnew System::Windows::Forms::Label());
 			this->comboBox4 = (gcnew System::Windows::Forms::ComboBox());
-			this->button1 = (gcnew System::Windows::Forms::Button());
-			this->button3 = (gcnew System::Windows::Forms::Button());
-			this->progressBar1 = (gcnew System::Windows::Forms::ProgressBar());
-			this->label5 = (gcnew System::Windows::Forms::Label());
-			this->button4 = (gcnew System::Windows::Forms::Button());
-			this->label6 = (gcnew System::Windows::Forms::Label());
-			this->comboBox5 = (gcnew System::Windows::Forms::ComboBox());
-			this->label7 = (gcnew System::Windows::Forms::Label());
-			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
-			this->label8 = (gcnew System::Windows::Forms::Label());
-			this->label9 = (gcnew System::Windows::Forms::Label());
-			this->label10 = (gcnew System::Windows::Forms::Label());
-			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
-			this->label11 = (gcnew System::Windows::Forms::Label());
-			this->button5 = (gcnew System::Windows::Forms::Button());
-			this->label12 = (gcnew System::Windows::Forms::Label());
-			this->label13 = (gcnew System::Windows::Forms::Label());
-			this->button6 = (gcnew System::Windows::Forms::Button());
-			this->label14 = (gcnew System::Windows::Forms::Label());
-			this->label15 = (gcnew System::Windows::Forms::Label());
-			this->label16 = (gcnew System::Windows::Forms::Label());
-			this->label17 = (gcnew System::Windows::Forms::Label());
-			this->label18 = (gcnew System::Windows::Forms::Label());
-			this->textBox5 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox6 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox7 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox8 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox9 = (gcnew System::Windows::Forms::TextBox());
-			this->label19 = (gcnew System::Windows::Forms::Label());
-			this->label20 = (gcnew System::Windows::Forms::Label());
-			this->label21 = (gcnew System::Windows::Forms::Label());
-			this->textBox10 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox11 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox12 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox13 = (gcnew System::Windows::Forms::TextBox());
-			this->label22 = (gcnew System::Windows::Forms::Label());
+			this->Exit_Button = (gcnew System::Windows::Forms::Button());
+			this->Back_Button = (gcnew System::Windows::Forms::Button());
+			this->Form2_DefaultInformation_ProgressBar = (gcnew System::Windows::Forms::ProgressBar());
+			this->Lectures_List = (gcnew System::Windows::Forms::Label());
+			this->Right_Information_Button = (gcnew System::Windows::Forms::Button());
+			this->Right_Information = (gcnew System::Windows::Forms::Label());
+			this->Form2_Studies_ComboBox = (gcnew System::Windows::Forms::ComboBox());
+			this->Studies_Label = (gcnew System::Windows::Forms::Label());
+			this->Informatics_Laboratory_Grade = (gcnew System::Windows::Forms::TextBox());
+			this->Informatics_Mid_Term_Grade = (gcnew System::Windows::Forms::TextBox());
+			this->Informatics_Exam_Grade = (gcnew System::Windows::Forms::TextBox());
+			this->Informatics_Laboratory_Label = (gcnew System::Windows::Forms::Label());
+			this->Informatics_Mid_Term_Label = (gcnew System::Windows::Forms::Label());
+			this->Informatics_Exam_Label = (gcnew System::Windows::Forms::Label());
+			this->Informatics_Final_Grade = (gcnew System::Windows::Forms::TextBox());
+			this->Informatics_Final_Grade_Label = (gcnew System::Windows::Forms::Label());
+			this->Calculate_Grades_Button = (gcnew System::Windows::Forms::Button());
+			this->Calculate_Grades = (gcnew System::Windows::Forms::Label());
+			this->Right_Lectures = (gcnew System::Windows::Forms::Label());
+			this->Right_Lectures_Button = (gcnew System::Windows::Forms::Button());
+			this->Math_Test1_Label = (gcnew System::Windows::Forms::Label());
+			this->Math_Test2_Label = (gcnew System::Windows::Forms::Label());
+			this->Math_Mid_Term_Label = (gcnew System::Windows::Forms::Label());
+			this->Math_Final_Grade_Label = (gcnew System::Windows::Forms::Label());
+			this->Math_Exam_Label = (gcnew System::Windows::Forms::Label());
+			this->Math_Test1_Grade = (gcnew System::Windows::Forms::TextBox());
+			this->Math_Test2_Grade = (gcnew System::Windows::Forms::TextBox());
+			this->Math_Mid_Term_Grade = (gcnew System::Windows::Forms::TextBox());
+			this->Math_Exam_Grade = (gcnew System::Windows::Forms::TextBox());
+			this->Math_Final_Grade = (gcnew System::Windows::Forms::TextBox());
+			this->Programming_Laboratory_Label = (gcnew System::Windows::Forms::Label());
+			this->Programming_Mid_Term_Label = (gcnew System::Windows::Forms::Label());
+			this->Programming_Exam_Label = (gcnew System::Windows::Forms::Label());
+			this->Programming_Laboratory_Grade = (gcnew System::Windows::Forms::TextBox());
+			this->Programming_Mid_Term_Grade = (gcnew System::Windows::Forms::TextBox());
+			this->Programming_Exam_Grade = (gcnew System::Windows::Forms::TextBox());
+			this->Programming_Final_Grade = (gcnew System::Windows::Forms::TextBox());
+			this->Programming_Final_Grade_Label = (gcnew System::Windows::Forms::Label());
 			this->SuspendLayout();
 			// 
-			// label1
+			// Faculty_Label
 			// 
-			this->label1->AutoSize = true;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->Faculty_Label->AutoSize = true;
+			this->Faculty_Label->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(186)));
-			this->label1->Location = System::Drawing::Point(12, 59);
-			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(187, 20);
-			this->label1->TabIndex = 0;
-			this->label1->Text = L"Choose your Faculty:";
+			this->Faculty_Label->Location = System::Drawing::Point(12, 59);
+			this->Faculty_Label->Name = L"Faculty_Label";
+			this->Faculty_Label->Size = System::Drawing::Size(187, 20);
+			this->Faculty_Label->TabIndex = 0;
+			this->Faculty_Label->Text = L"Choose your Faculty:";
 			// 
-			// comboBox1
+			// Form2_University_ComboBox
 			// 
-			this->comboBox1->BackColor = System::Drawing::SystemColors::Window;
-			this->comboBox1->DropDownWidth = 200;
-			this->comboBox1->FormattingEnabled = true;
-			this->comboBox1->Items->AddRange(gcnew cli::array< System::Object^  >(1) { L"VDU (Vytautas Magnus University)" });
-			this->comboBox1->Location = System::Drawing::Point(18, 32);
-			this->comboBox1->Name = L"comboBox1";
-			this->comboBox1->Size = System::Drawing::Size(190, 24);
-			this->comboBox1->TabIndex = 1;
-			this->comboBox1->SelectedIndexChanged += gcnew System::EventHandler(this, &Login_Screen::comboBox1_SelectedIndexChanged);
+			this->Form2_University_ComboBox->BackColor = System::Drawing::SystemColors::Window;
+			this->Form2_University_ComboBox->DropDownWidth = 200;
+			this->Form2_University_ComboBox->FormattingEnabled = true;
+			this->Form2_University_ComboBox->Items->AddRange(gcnew cli::array< System::Object^  >(1) { L"VDU (Vytautas Magnus University)" });
+			this->Form2_University_ComboBox->Location = System::Drawing::Point(18, 32);
+			this->Form2_University_ComboBox->Name = L"Form2_University_ComboBox";
+			this->Form2_University_ComboBox->Size = System::Drawing::Size(190, 24);
+			this->Form2_University_ComboBox->TabIndex = 1;
+			this->Form2_University_ComboBox->SelectedIndexChanged += gcnew System::EventHandler(this, &Login_Screen::Form2_University_ComboBox_SelectedIndexChanged);
 			// 
-			// label2
+			// Form2_University_Label
 			// 
-			this->label2->AutoSize = true;
-			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(186)));
-			this->label2->Location = System::Drawing::Point(12, 9);
-			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(210, 20);
-			this->label2->TabIndex = 2;
-			this->label2->Text = L"Choose your University:";
+			this->Form2_University_Label->AutoSize = true;
+			this->Form2_University_Label->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Bold,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(186)));
+			this->Form2_University_Label->Location = System::Drawing::Point(12, 9);
+			this->Form2_University_Label->Name = L"Form2_University_Label";
+			this->Form2_University_Label->Size = System::Drawing::Size(210, 20);
+			this->Form2_University_Label->TabIndex = 2;
+			this->Form2_University_Label->Text = L"Choose your University:";
 			// 
-			// comboBox2
+			// Form2_Faculty_ComboBox
 			// 
-			this->comboBox2->DropDownWidth = 200;
-			this->comboBox2->FormattingEnabled = true;
-			this->comboBox2->Items->AddRange(gcnew cli::array< System::Object^  >(10) {
+			this->Form2_Faculty_ComboBox->DropDownWidth = 200;
+			this->Form2_Faculty_ComboBox->FormattingEnabled = true;
+			this->Form2_Faculty_ComboBox->Items->AddRange(gcnew cli::array< System::Object^  >(10) {
 				L"Economics and Management", L"Natural Sciences",
 					L"Humanities", L"Informatics", L"Catholic Theology", L"Arts", L"Music Academy", L"Political Science and Diplomacy", L"Social Sciences",
 					L"Law"
 			});
-			this->comboBox2->Location = System::Drawing::Point(18, 82);
-			this->comboBox2->Name = L"comboBox2";
-			this->comboBox2->Size = System::Drawing::Size(191, 24);
-			this->comboBox2->TabIndex = 3;
-			this->comboBox2->SelectedIndexChanged += gcnew System::EventHandler(this, &Login_Screen::comboBox2_SelectedIndexChanged);
+			this->Form2_Faculty_ComboBox->Location = System::Drawing::Point(18, 82);
+			this->Form2_Faculty_ComboBox->Name = L"Form2_Faculty_ComboBox";
+			this->Form2_Faculty_ComboBox->Size = System::Drawing::Size(191, 24);
+			this->Form2_Faculty_ComboBox->TabIndex = 3;
+			this->Form2_Faculty_ComboBox->SelectedIndexChanged += gcnew System::EventHandler(this, &Login_Screen::Form2_Faculty_ComboBox_SelectedIndexChanged);
 			// 
-			// label3
+			// Course_Label
 			// 
-			this->label3->AutoSize = true;
-			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->Course_Label->AutoSize = true;
+			this->Course_Label->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(186)));
-			this->label3->Location = System::Drawing::Point(16, 164);
-			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(183, 20);
-			this->label3->TabIndex = 4;
-			this->label3->Text = L"Choose your course:";
+			this->Course_Label->Location = System::Drawing::Point(16, 164);
+			this->Course_Label->Name = L"Course_Label";
+			this->Course_Label->Size = System::Drawing::Size(183, 20);
+			this->Course_Label->TabIndex = 4;
+			this->Course_Label->Text = L"Choose your course:";
 			// 
-			// comboBox3
+			// Form2_Course_ComboBox
 			// 
-			this->comboBox3->DropDownWidth = 200;
-			this->comboBox3->FormattingEnabled = true;
-			this->comboBox3->Items->AddRange(gcnew cli::array< System::Object^  >(4) { L"I", L"II", L"III", L"IV" });
-			this->comboBox3->Location = System::Drawing::Point(17, 187);
-			this->comboBox3->Name = L"comboBox3";
-			this->comboBox3->Size = System::Drawing::Size(193, 24);
-			this->comboBox3->TabIndex = 5;
-			this->comboBox3->SelectedIndexChanged += gcnew System::EventHandler(this, &Login_Screen::comboBox3_SelectedIndexChanged);
+			this->Form2_Course_ComboBox->DropDownWidth = 200;
+			this->Form2_Course_ComboBox->FormattingEnabled = true;
+			this->Form2_Course_ComboBox->Items->AddRange(gcnew cli::array< System::Object^  >(4) { L"I", L"II", L"III", L"IV" });
+			this->Form2_Course_ComboBox->Location = System::Drawing::Point(17, 187);
+			this->Form2_Course_ComboBox->Name = L"Form2_Course_ComboBox";
+			this->Form2_Course_ComboBox->Size = System::Drawing::Size(193, 24);
+			this->Form2_Course_ComboBox->TabIndex = 5;
+			this->Form2_Course_ComboBox->SelectedIndexChanged += gcnew System::EventHandler(this, &Login_Screen::Form2_Course_ComboBox_SelectedIndexChanged);
 			// 
-			// label4
+			// Semester_Label
 			// 
-			this->label4->AutoSize = true;
-			this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->Semester_Label->AutoSize = true;
+			this->Semester_Label->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(186)));
-			this->label4->Location = System::Drawing::Point(16, 214);
-			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(162, 20);
-			this->label4->TabIndex = 6;
-			this->label4->Text = L"Choose semester:";
+			this->Semester_Label->Location = System::Drawing::Point(16, 214);
+			this->Semester_Label->Name = L"Semester_Label";
+			this->Semester_Label->Size = System::Drawing::Size(162, 20);
+			this->Semester_Label->TabIndex = 6;
+			this->Semester_Label->Text = L"Choose semester:";
 			// 
 			// comboBox4
 			// 
@@ -245,403 +303,403 @@ namespace Students_Marks_Average_Calculator {
 			this->comboBox4->TabIndex = 7;
 			this->comboBox4->SelectedIndexChanged += gcnew System::EventHandler(this, &Login_Screen::comboBox4_SelectedIndexChanged);
 			// 
-			// button1
+			// Exit_Button
 			// 
-			this->button1->Location = System::Drawing::Point(1290, 611);
-			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(80, 30);
-			this->button1->TabIndex = 8;
-			this->button1->Text = L"Exit";
-			this->button1->UseVisualStyleBackColor = true;
-			this->button1->Click += gcnew System::EventHandler(this, &Login_Screen::button1_Click);
+			this->Exit_Button->Location = System::Drawing::Point(1290, 611);
+			this->Exit_Button->Name = L"Exit_Button";
+			this->Exit_Button->Size = System::Drawing::Size(80, 30);
+			this->Exit_Button->TabIndex = 8;
+			this->Exit_Button->Text = L"Exit";
+			this->Exit_Button->UseVisualStyleBackColor = true;
+			this->Exit_Button->Click += gcnew System::EventHandler(this, &Login_Screen::Exit_Button_Click);
 			// 
-			// button3
+			// Back_Button
 			// 
-			this->button3->Location = System::Drawing::Point(1204, 611);
-			this->button3->Name = L"button3";
-			this->button3->Size = System::Drawing::Size(80, 30);
-			this->button3->TabIndex = 10;
-			this->button3->Text = L"Back";
-			this->button3->UseVisualStyleBackColor = true;
-			this->button3->Click += gcnew System::EventHandler(this, &Login_Screen::button3_Click);
+			this->Back_Button->Location = System::Drawing::Point(1204, 611);
+			this->Back_Button->Name = L"Back_Button";
+			this->Back_Button->Size = System::Drawing::Size(80, 30);
+			this->Back_Button->TabIndex = 10;
+			this->Back_Button->Text = L"Back";
+			this->Back_Button->UseVisualStyleBackColor = true;
+			this->Back_Button->Click += gcnew System::EventHandler(this, &Login_Screen::Back_Button_Click);
 			// 
-			// progressBar1
+			// Form2_DefaultInformation_ProgressBar
 			// 
-			this->progressBar1->Location = System::Drawing::Point(1001, 618);
-			this->progressBar1->Name = L"progressBar1";
-			this->progressBar1->Size = System::Drawing::Size(100, 23);
-			this->progressBar1->TabIndex = 12;
-			this->progressBar1->Visible = false;
+			this->Form2_DefaultInformation_ProgressBar->Location = System::Drawing::Point(1001, 618);
+			this->Form2_DefaultInformation_ProgressBar->Name = L"Form2_DefaultInformation_ProgressBar";
+			this->Form2_DefaultInformation_ProgressBar->Size = System::Drawing::Size(100, 23);
+			this->Form2_DefaultInformation_ProgressBar->TabIndex = 12;
+			this->Form2_DefaultInformation_ProgressBar->Visible = false;
 			// 
-			// label5
+			// Lectures_List
 			// 
-			this->label5->AutoSize = true;
-			this->label5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->Lectures_List->AutoSize = true;
+			this->Lectures_List->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(186)));
-			this->label5->Location = System::Drawing::Point(14, 325);
-			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(205, 20);
-			this->label5->TabIndex = 13;
-			this->label5->Text = L"Your main lectures list:";
-			this->label5->Visible = false;
+			this->Lectures_List->Location = System::Drawing::Point(14, 325);
+			this->Lectures_List->Name = L"Lectures_List";
+			this->Lectures_List->Size = System::Drawing::Size(205, 20);
+			this->Lectures_List->TabIndex = 13;
+			this->Lectures_List->Text = L"Your main lectures list:";
+			this->Lectures_List->Visible = false;
 			// 
-			// button4
+			// Right_Information_Button
 			// 
-			this->button4->Location = System::Drawing::Point(20, 292);
-			this->button4->Name = L"button4";
-			this->button4->Size = System::Drawing::Size(80, 30);
-			this->button4->TabIndex = 14;
-			this->button4->Text = L"Yes";
-			this->button4->UseVisualStyleBackColor = true;
-			this->button4->Click += gcnew System::EventHandler(this, &Login_Screen::button4_Click);
+			this->Right_Information_Button->Location = System::Drawing::Point(20, 292);
+			this->Right_Information_Button->Name = L"Right_Information_Button";
+			this->Right_Information_Button->Size = System::Drawing::Size(80, 30);
+			this->Right_Information_Button->TabIndex = 14;
+			this->Right_Information_Button->Text = L"Yes";
+			this->Right_Information_Button->UseVisualStyleBackColor = true;
+			this->Right_Information_Button->Click += gcnew System::EventHandler(this, &Login_Screen::Right_Information_Button_Click);
 			// 
-			// label6
+			// Right_Information
 			// 
-			this->label6->AutoSize = true;
-			this->label6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->Right_Information->AutoSize = true;
+			this->Right_Information->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(186)));
-			this->label6->Location = System::Drawing::Point(16, 269);
-			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(286, 20);
-			this->label6->TabIndex = 15;
-			this->label6->Text = L"I have selected right information:";
+			this->Right_Information->Location = System::Drawing::Point(16, 269);
+			this->Right_Information->Name = L"Right_Information";
+			this->Right_Information->Size = System::Drawing::Size(286, 20);
+			this->Right_Information->TabIndex = 15;
+			this->Right_Information->Text = L"I have selected right information:";
 			// 
-			// comboBox5
+			// Form2_Studies_ComboBox
 			// 
-			this->comboBox5->FormattingEnabled = true;
-			this->comboBox5->Items->AddRange(gcnew cli::array< System::Object^  >(1) { L"Informatics Systems" });
-			this->comboBox5->Location = System::Drawing::Point(18, 137);
-			this->comboBox5->Name = L"comboBox5";
-			this->comboBox5->Size = System::Drawing::Size(192, 24);
-			this->comboBox5->TabIndex = 16;
-			this->comboBox5->SelectedIndexChanged += gcnew System::EventHandler(this, &Login_Screen::comboBox5_SelectedIndexChanged);
+			this->Form2_Studies_ComboBox->FormattingEnabled = true;
+			this->Form2_Studies_ComboBox->Items->AddRange(gcnew cli::array< System::Object^  >(1) { L"Informatics Systems" });
+			this->Form2_Studies_ComboBox->Location = System::Drawing::Point(18, 137);
+			this->Form2_Studies_ComboBox->Name = L"Form2_Studies_ComboBox";
+			this->Form2_Studies_ComboBox->Size = System::Drawing::Size(192, 24);
+			this->Form2_Studies_ComboBox->TabIndex = 16;
+			this->Form2_Studies_ComboBox->SelectedIndexChanged += gcnew System::EventHandler(this, &Login_Screen::Form2_Studies_ComboBox_SelectedIndexChanged);
 			// 
-			// label7
+			// Studies_Label
 			// 
-			this->label7->AutoSize = true;
-			this->label7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->Studies_Label->AutoSize = true;
+			this->Studies_Label->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(186)));
-			this->label7->Location = System::Drawing::Point(16, 114);
-			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(193, 20);
-			this->label7->TabIndex = 17;
-			this->label7->Text = L"Choose your studies: ";
+			this->Studies_Label->Location = System::Drawing::Point(16, 114);
+			this->Studies_Label->Name = L"Studies_Label";
+			this->Studies_Label->Size = System::Drawing::Size(193, 20);
+			this->Studies_Label->TabIndex = 17;
+			this->Studies_Label->Text = L"Choose your studies: ";
 			// 
-			// textBox1
+			// Informatics_Laboratory_Grade
 			// 
-			this->textBox1->Location = System::Drawing::Point(396, 352);
-			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(141, 22);
-			this->textBox1->TabIndex = 18;
-			this->textBox1->Visible = false;
-			this->textBox1->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &Login_Screen::textBox1_KeyPress);
+			this->Informatics_Laboratory_Grade->Location = System::Drawing::Point(396, 352);
+			this->Informatics_Laboratory_Grade->Name = L"Informatics_Laboratory_Grade";
+			this->Informatics_Laboratory_Grade->Size = System::Drawing::Size(141, 22);
+			this->Informatics_Laboratory_Grade->TabIndex = 18;
+			this->Informatics_Laboratory_Grade->Visible = false;
+			this->Informatics_Laboratory_Grade->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &Login_Screen::Informatics_Laboratory_Grade_KeyPress);
 			// 
-			// textBox2
+			// Informatics_Mid_Term_Grade
 			// 
-			this->textBox2->Location = System::Drawing::Point(543, 352);
-			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(134, 22);
-			this->textBox2->TabIndex = 19;
-			this->textBox2->Visible = false;
-			this->textBox2->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &Login_Screen::textBox2_KeyPress);
+			this->Informatics_Mid_Term_Grade->Location = System::Drawing::Point(543, 352);
+			this->Informatics_Mid_Term_Grade->Name = L"Informatics_Mid_Term_Grade";
+			this->Informatics_Mid_Term_Grade->Size = System::Drawing::Size(134, 22);
+			this->Informatics_Mid_Term_Grade->TabIndex = 19;
+			this->Informatics_Mid_Term_Grade->Visible = false;
+			this->Informatics_Mid_Term_Grade->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &Login_Screen::Informatics_Mid_Term_Grade_KeyPress);
 			// 
-			// textBox3
+			// Informatics_Exam_Grade
 			// 
-			this->textBox3->Location = System::Drawing::Point(683, 352);
-			this->textBox3->Name = L"textBox3";
-			this->textBox3->Size = System::Drawing::Size(104, 22);
-			this->textBox3->TabIndex = 20;
-			this->textBox3->Visible = false;
-			this->textBox3->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &Login_Screen::textBox3_KeyPress);
+			this->Informatics_Exam_Grade->Location = System::Drawing::Point(683, 352);
+			this->Informatics_Exam_Grade->Name = L"Informatics_Exam_Grade";
+			this->Informatics_Exam_Grade->Size = System::Drawing::Size(104, 22);
+			this->Informatics_Exam_Grade->TabIndex = 20;
+			this->Informatics_Exam_Grade->Visible = false;
+			this->Informatics_Exam_Grade->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &Login_Screen::Informatics_Exam_Grade_KeyPress);
 			// 
-			// label8
+			// Informatics_Laboratory_Label
 			// 
-			this->label8->AutoSize = true;
-			this->label8->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->Informatics_Laboratory_Label->AutoSize = true;
+			this->Informatics_Laboratory_Label->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Bold,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(186)));
+			this->Informatics_Laboratory_Label->Location = System::Drawing::Point(392, 329);
+			this->Informatics_Laboratory_Label->Name = L"Informatics_Laboratory_Label";
+			this->Informatics_Laboratory_Label->Size = System::Drawing::Size(136, 18);
+			this->Informatics_Laboratory_Label->TabIndex = 21;
+			this->Informatics_Laboratory_Label->Text = L"Laboratory [30%]";
+			this->Informatics_Laboratory_Label->Visible = false;
+			// 
+			// Informatics_Mid_Term_Label
+			// 
+			this->Informatics_Mid_Term_Label->AutoSize = true;
+			this->Informatics_Mid_Term_Label->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Bold,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(186)));
+			this->Informatics_Mid_Term_Label->Location = System::Drawing::Point(540, 329);
+			this->Informatics_Mid_Term_Label->Name = L"Informatics_Mid_Term_Label";
+			this->Informatics_Mid_Term_Label->Size = System::Drawing::Size(127, 18);
+			this->Informatics_Mid_Term_Label->TabIndex = 22;
+			this->Informatics_Mid_Term_Label->Text = L"Mid-Term [20%]";
+			this->Informatics_Mid_Term_Label->Visible = false;
+			// 
+			// Informatics_Exam_Label
+			// 
+			this->Informatics_Exam_Label->AutoSize = true;
+			this->Informatics_Exam_Label->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(186)));
-			this->label8->Location = System::Drawing::Point(392, 329);
-			this->label8->Name = L"label8";
-			this->label8->Size = System::Drawing::Size(136, 18);
-			this->label8->TabIndex = 21;
-			this->label8->Text = L"Laboratory [30%]";
-			this->label8->Visible = false;
+			this->Informatics_Exam_Label->Location = System::Drawing::Point(680, 331);
+			this->Informatics_Exam_Label->Name = L"Informatics_Exam_Label";
+			this->Informatics_Exam_Label->Size = System::Drawing::Size(97, 18);
+			this->Informatics_Exam_Label->TabIndex = 23;
+			this->Informatics_Exam_Label->Text = L"Exam [50%]";
+			this->Informatics_Exam_Label->Visible = false;
 			// 
-			// label9
+			// Informatics_Final_Grade
 			// 
-			this->label9->AutoSize = true;
-			this->label9->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->Informatics_Final_Grade->Location = System::Drawing::Point(942, 352);
+			this->Informatics_Final_Grade->Name = L"Informatics_Final_Grade";
+			this->Informatics_Final_Grade->Size = System::Drawing::Size(92, 22);
+			this->Informatics_Final_Grade->TabIndex = 24;
+			this->Informatics_Final_Grade->Visible = false;
+			// 
+			// Informatics_Final_Grade_Label
+			// 
+			this->Informatics_Final_Grade_Label->AutoSize = true;
+			this->Informatics_Final_Grade_Label->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Bold,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(186)));
+			this->Informatics_Final_Grade_Label->Location = System::Drawing::Point(942, 329);
+			this->Informatics_Final_Grade_Label->Name = L"Informatics_Final_Grade_Label";
+			this->Informatics_Final_Grade_Label->Size = System::Drawing::Size(95, 18);
+			this->Informatics_Final_Grade_Label->TabIndex = 25;
+			this->Informatics_Final_Grade_Label->Text = L"Final Grade";
+			this->Informatics_Final_Grade_Label->Visible = false;
+			// 
+			// Calculate_Grades_Button
+			// 
+			this->Calculate_Grades_Button->Location = System::Drawing::Point(396, 296);
+			this->Calculate_Grades_Button->Name = L"Calculate_Grades_Button";
+			this->Calculate_Grades_Button->Size = System::Drawing::Size(80, 30);
+			this->Calculate_Grades_Button->TabIndex = 26;
+			this->Calculate_Grades_Button->Text = L"Yes";
+			this->Calculate_Grades_Button->UseVisualStyleBackColor = true;
+			this->Calculate_Grades_Button->Visible = false;
+			this->Calculate_Grades_Button->Click += gcnew System::EventHandler(this, &Login_Screen::Calculate_Grades_Button_Click);
+			// 
+			// Calculate_Grades
+			// 
+			this->Calculate_Grades->AutoSize = true;
+			this->Calculate_Grades->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(186)));
-			this->label9->Location = System::Drawing::Point(540, 329);
-			this->label9->Name = L"label9";
-			this->label9->Size = System::Drawing::Size(127, 18);
-			this->label9->TabIndex = 22;
-			this->label9->Text = L"Mid-Term [20%]";
-			this->label9->Visible = false;
+			this->Calculate_Grades->Location = System::Drawing::Point(392, 269);
+			this->Calculate_Grades->Name = L"Calculate_Grades";
+			this->Calculate_Grades->Size = System::Drawing::Size(240, 20);
+			this->Calculate_Grades->TabIndex = 27;
+			this->Calculate_Grades->Text = L"I want calculate my grades:";
+			this->Calculate_Grades->Visible = false;
 			// 
-			// label10
+			// Right_Lectures
 			// 
-			this->label10->AutoSize = true;
-			this->label10->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->Right_Lectures->AutoSize = true;
+			this->Right_Lectures->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(186)));
-			this->label10->Location = System::Drawing::Point(680, 331);
-			this->label10->Name = L"label10";
-			this->label10->Size = System::Drawing::Size(97, 18);
-			this->label10->TabIndex = 23;
-			this->label10->Text = L"Exam [50%]";
-			this->label10->Visible = false;
+			this->Right_Lectures->Location = System::Drawing::Point(14, 473);
+			this->Right_Lectures->Name = L"Right_Lectures";
+			this->Right_Lectures->Size = System::Drawing::Size(260, 20);
+			this->Right_Lectures->TabIndex = 29;
+			this->Right_Lectures->Text = L"I have selected right lectures:";
+			this->Right_Lectures->Visible = false;
 			// 
-			// textBox4
+			// Right_Lectures_Button
 			// 
-			this->textBox4->Location = System::Drawing::Point(942, 352);
-			this->textBox4->Name = L"textBox4";
-			this->textBox4->Size = System::Drawing::Size(92, 22);
-			this->textBox4->TabIndex = 24;
-			this->textBox4->Visible = false;
+			this->Right_Lectures_Button->Location = System::Drawing::Point(16, 496);
+			this->Right_Lectures_Button->Name = L"Right_Lectures_Button";
+			this->Right_Lectures_Button->Size = System::Drawing::Size(80, 30);
+			this->Right_Lectures_Button->TabIndex = 30;
+			this->Right_Lectures_Button->Text = L"Yes";
+			this->Right_Lectures_Button->UseVisualStyleBackColor = true;
+			this->Right_Lectures_Button->Visible = false;
+			this->Right_Lectures_Button->Click += gcnew System::EventHandler(this, &Login_Screen::button6_Click);
 			// 
-			// label11
+			// Math_Test1_Label
 			// 
-			this->label11->AutoSize = true;
-			this->label11->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->Math_Test1_Label->AutoSize = true;
+			this->Math_Test1_Label->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(186)));
-			this->label11->Location = System::Drawing::Point(942, 329);
-			this->label11->Name = L"label11";
-			this->label11->Size = System::Drawing::Size(95, 18);
-			this->label11->TabIndex = 25;
-			this->label11->Text = L"Final Grade";
-			this->label11->Visible = false;
+			this->Math_Test1_Label->Location = System::Drawing::Point(393, 377);
+			this->Math_Test1_Label->Name = L"Math_Test1_Label";
+			this->Math_Test1_Label->Size = System::Drawing::Size(111, 18);
+			this->Math_Test1_Label->TabIndex = 31;
+			this->Math_Test1_Label->Text = L"Test I [12.5%]";
+			this->Math_Test1_Label->Visible = false;
 			// 
-			// button5
+			// Math_Test2_Label
 			// 
-			this->button5->Location = System::Drawing::Point(396, 296);
-			this->button5->Name = L"button5";
-			this->button5->Size = System::Drawing::Size(80, 30);
-			this->button5->TabIndex = 26;
-			this->button5->Text = L"Yes";
-			this->button5->UseVisualStyleBackColor = true;
-			this->button5->Visible = false;
-			this->button5->Click += gcnew System::EventHandler(this, &Login_Screen::button5_Click);
-			// 
-			// label12
-			// 
-			this->label12->AutoSize = true;
-			this->label12->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->Math_Test2_Label->AutoSize = true;
+			this->Math_Test2_Label->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(186)));
-			this->label12->Location = System::Drawing::Point(392, 269);
-			this->label12->Name = L"label12";
-			this->label12->Size = System::Drawing::Size(240, 20);
-			this->label12->TabIndex = 27;
-			this->label12->Text = L"I want calculate my grades:";
-			this->label12->Visible = false;
+			this->Math_Test2_Label->Location = System::Drawing::Point(519, 377);
+			this->Math_Test2_Label->Name = L"Math_Test2_Label";
+			this->Math_Test2_Label->Size = System::Drawing::Size(115, 18);
+			this->Math_Test2_Label->TabIndex = 32;
+			this->Math_Test2_Label->Text = L"Test II [12.5%]";
+			this->Math_Test2_Label->Visible = false;
 			// 
-			// label13
+			// Math_Mid_Term_Label
 			// 
-			this->label13->AutoSize = true;
-			this->label13->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->Math_Mid_Term_Label->AutoSize = true;
+			this->Math_Mid_Term_Label->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(186)));
-			this->label13->Location = System::Drawing::Point(14, 473);
-			this->label13->Name = L"label13";
-			this->label13->Size = System::Drawing::Size(260, 20);
-			this->label13->TabIndex = 29;
-			this->label13->Text = L"I have selected right lectures:";
-			this->label13->Visible = false;
+			this->Math_Mid_Term_Label->Location = System::Drawing::Point(650, 377);
+			this->Math_Mid_Term_Label->Name = L"Math_Mid_Term_Label";
+			this->Math_Mid_Term_Label->Size = System::Drawing::Size(127, 18);
+			this->Math_Mid_Term_Label->TabIndex = 33;
+			this->Math_Mid_Term_Label->Text = L"Mid-Term [25%]";
+			this->Math_Mid_Term_Label->Visible = false;
 			// 
-			// button6
+			// Math_Final_Grade_Label
 			// 
-			this->button6->Location = System::Drawing::Point(16, 496);
-			this->button6->Name = L"button6";
-			this->button6->Size = System::Drawing::Size(80, 30);
-			this->button6->TabIndex = 30;
-			this->button6->Text = L"Yes";
-			this->button6->UseVisualStyleBackColor = true;
-			this->button6->Visible = false;
-			this->button6->Click += gcnew System::EventHandler(this, &Login_Screen::button6_Click);
-			// 
-			// label14
-			// 
-			this->label14->AutoSize = true;
-			this->label14->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->Math_Final_Grade_Label->AutoSize = true;
+			this->Math_Final_Grade_Label->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(186)));
-			this->label14->Location = System::Drawing::Point(393, 377);
-			this->label14->Name = L"label14";
-			this->label14->Size = System::Drawing::Size(111, 18);
-			this->label14->TabIndex = 31;
-			this->label14->Text = L"Test I [12.5%]";
-			this->label14->Visible = false;
+			this->Math_Final_Grade_Label->Location = System::Drawing::Point(942, 377);
+			this->Math_Final_Grade_Label->Name = L"Math_Final_Grade_Label";
+			this->Math_Final_Grade_Label->Size = System::Drawing::Size(95, 18);
+			this->Math_Final_Grade_Label->TabIndex = 34;
+			this->Math_Final_Grade_Label->Text = L"Final Grade";
+			this->Math_Final_Grade_Label->Visible = false;
 			// 
-			// label15
+			// Math_Exam_Label
 			// 
-			this->label15->AutoSize = true;
-			this->label15->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->Math_Exam_Label->AutoSize = true;
+			this->Math_Exam_Label->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(186)));
-			this->label15->Location = System::Drawing::Point(519, 377);
-			this->label15->Name = L"label15";
-			this->label15->Size = System::Drawing::Size(115, 18);
-			this->label15->TabIndex = 32;
-			this->label15->Text = L"Test II [12.5%]";
-			this->label15->Visible = false;
+			this->Math_Exam_Label->Location = System::Drawing::Point(792, 377);
+			this->Math_Exam_Label->Name = L"Math_Exam_Label";
+			this->Math_Exam_Label->Size = System::Drawing::Size(97, 18);
+			this->Math_Exam_Label->TabIndex = 35;
+			this->Math_Exam_Label->Text = L"Exam [50%]";
+			this->Math_Exam_Label->Visible = false;
 			// 
-			// label16
+			// Math_Test1_Grade
 			// 
-			this->label16->AutoSize = true;
-			this->label16->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->Math_Test1_Grade->Location = System::Drawing::Point(396, 399);
+			this->Math_Test1_Grade->Name = L"Math_Test1_Grade";
+			this->Math_Test1_Grade->Size = System::Drawing::Size(120, 22);
+			this->Math_Test1_Grade->TabIndex = 36;
+			this->Math_Test1_Grade->Visible = false;
+			this->Math_Test1_Grade->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &Login_Screen::Math_Test1_Grade_KeyPress);
+			// 
+			// Math_Test2_Grade
+			// 
+			this->Math_Test2_Grade->Location = System::Drawing::Point(522, 398);
+			this->Math_Test2_Grade->Name = L"Math_Test2_Grade";
+			this->Math_Test2_Grade->Size = System::Drawing::Size(124, 22);
+			this->Math_Test2_Grade->TabIndex = 37;
+			this->Math_Test2_Grade->Visible = false;
+			this->Math_Test2_Grade->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &Login_Screen::Math_Test2_Grade_KeyPress);
+			// 
+			// Math_Mid_Term_Grade
+			// 
+			this->Math_Mid_Term_Grade->Location = System::Drawing::Point(652, 398);
+			this->Math_Mid_Term_Grade->Name = L"Math_Mid_Term_Grade";
+			this->Math_Mid_Term_Grade->Size = System::Drawing::Size(135, 22);
+			this->Math_Mid_Term_Grade->TabIndex = 38;
+			this->Math_Mid_Term_Grade->Visible = false;
+			this->Math_Mid_Term_Grade->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &Login_Screen::Math_Mid_Term_Grade_KeyPress);
+			// 
+			// Math_Exam_Grade
+			// 
+			this->Math_Exam_Grade->Location = System::Drawing::Point(795, 398);
+			this->Math_Exam_Grade->Name = L"Math_Exam_Grade";
+			this->Math_Exam_Grade->Size = System::Drawing::Size(104, 22);
+			this->Math_Exam_Grade->TabIndex = 39;
+			this->Math_Exam_Grade->Visible = false;
+			this->Math_Exam_Grade->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &Login_Screen::Math_Exam_Grade_KeyPress);
+			// 
+			// Math_Final_Grade
+			// 
+			this->Math_Final_Grade->Location = System::Drawing::Point(942, 398);
+			this->Math_Final_Grade->Name = L"Math_Final_Grade";
+			this->Math_Final_Grade->Size = System::Drawing::Size(92, 22);
+			this->Math_Final_Grade->TabIndex = 40;
+			this->Math_Final_Grade->Visible = false;
+			// 
+			// Programming_Laboratory_Label
+			// 
+			this->Programming_Laboratory_Label->AutoSize = true;
+			this->Programming_Laboratory_Label->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Bold,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(186)));
+			this->Programming_Laboratory_Label->Location = System::Drawing::Point(395, 423);
+			this->Programming_Laboratory_Label->Name = L"Programming_Laboratory_Label";
+			this->Programming_Laboratory_Label->Size = System::Drawing::Size(136, 18);
+			this->Programming_Laboratory_Label->TabIndex = 41;
+			this->Programming_Laboratory_Label->Text = L"Laboratory [30%]";
+			this->Programming_Laboratory_Label->Visible = false;
+			// 
+			// Programming_Mid_Term_Label
+			// 
+			this->Programming_Mid_Term_Label->AutoSize = true;
+			this->Programming_Mid_Term_Label->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Bold,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(186)));
+			this->Programming_Mid_Term_Label->Location = System::Drawing::Point(546, 422);
+			this->Programming_Mid_Term_Label->Name = L"Programming_Mid_Term_Label";
+			this->Programming_Mid_Term_Label->Size = System::Drawing::Size(122, 18);
+			this->Programming_Mid_Term_Label->TabIndex = 42;
+			this->Programming_Mid_Term_Label->Text = L"Mid-Term[20%]";
+			this->Programming_Mid_Term_Label->Visible = false;
+			// 
+			// Programming_Exam_Label
+			// 
+			this->Programming_Exam_Label->AutoSize = true;
+			this->Programming_Exam_Label->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(186)));
-			this->label16->Location = System::Drawing::Point(650, 377);
-			this->label16->Name = L"label16";
-			this->label16->Size = System::Drawing::Size(127, 18);
-			this->label16->TabIndex = 33;
-			this->label16->Text = L"Mid-Term [25%]";
-			this->label16->Visible = false;
+			this->Programming_Exam_Label->Location = System::Drawing::Point(691, 423);
+			this->Programming_Exam_Label->Name = L"Programming_Exam_Label";
+			this->Programming_Exam_Label->Size = System::Drawing::Size(97, 18);
+			this->Programming_Exam_Label->TabIndex = 43;
+			this->Programming_Exam_Label->Text = L"Exam [50%]";
+			this->Programming_Exam_Label->Visible = false;
 			// 
-			// label17
+			// Programming_Laboratory_Grade
 			// 
-			this->label17->AutoSize = true;
-			this->label17->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(186)));
-			this->label17->Location = System::Drawing::Point(942, 377);
-			this->label17->Name = L"label17";
-			this->label17->Size = System::Drawing::Size(95, 18);
-			this->label17->TabIndex = 34;
-			this->label17->Text = L"Final Grade";
-			this->label17->Visible = false;
+			this->Programming_Laboratory_Grade->Location = System::Drawing::Point(396, 444);
+			this->Programming_Laboratory_Grade->Name = L"Programming_Laboratory_Grade";
+			this->Programming_Laboratory_Grade->Size = System::Drawing::Size(141, 22);
+			this->Programming_Laboratory_Grade->TabIndex = 44;
+			this->Programming_Laboratory_Grade->Visible = false;
+			this->Programming_Laboratory_Grade->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &Login_Screen::Programming_Laboratory_Grade_KeyPress);
 			// 
-			// label18
+			// Programming_Mid_Term_Grade
 			// 
-			this->label18->AutoSize = true;
-			this->label18->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(186)));
-			this->label18->Location = System::Drawing::Point(792, 377);
-			this->label18->Name = L"label18";
-			this->label18->Size = System::Drawing::Size(97, 18);
-			this->label18->TabIndex = 35;
-			this->label18->Text = L"Exam [50%]";
-			this->label18->Visible = false;
+			this->Programming_Mid_Term_Grade->Location = System::Drawing::Point(549, 443);
+			this->Programming_Mid_Term_Grade->Name = L"Programming_Mid_Term_Grade";
+			this->Programming_Mid_Term_Grade->Size = System::Drawing::Size(128, 22);
+			this->Programming_Mid_Term_Grade->TabIndex = 45;
+			this->Programming_Mid_Term_Grade->Visible = false;
+			this->Programming_Mid_Term_Grade->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &Login_Screen::Programming_Mid_Term_Grade_KeyPress);
 			// 
-			// textBox5
+			// Programming_Exam_Grade
 			// 
-			this->textBox5->Location = System::Drawing::Point(396, 399);
-			this->textBox5->Name = L"textBox5";
-			this->textBox5->Size = System::Drawing::Size(120, 22);
-			this->textBox5->TabIndex = 36;
-			this->textBox5->Visible = false;
-			this->textBox5->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &Login_Screen::textBox5_KeyPress);
+			this->Programming_Exam_Grade->Location = System::Drawing::Point(694, 443);
+			this->Programming_Exam_Grade->Name = L"Programming_Exam_Grade";
+			this->Programming_Exam_Grade->Size = System::Drawing::Size(101, 22);
+			this->Programming_Exam_Grade->TabIndex = 46;
+			this->Programming_Exam_Grade->Visible = false;
+			this->Programming_Exam_Grade->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &Login_Screen::Programming_Exam_Grade_KeyPress);
 			// 
-			// textBox6
+			// Programming_Final_Grade
 			// 
-			this->textBox6->Location = System::Drawing::Point(522, 398);
-			this->textBox6->Name = L"textBox6";
-			this->textBox6->Size = System::Drawing::Size(124, 22);
-			this->textBox6->TabIndex = 37;
-			this->textBox6->Visible = false;
-			this->textBox6->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &Login_Screen::textBox6_KeyPress);
+			this->Programming_Final_Grade->Location = System::Drawing::Point(942, 443);
+			this->Programming_Final_Grade->Name = L"Programming_Final_Grade";
+			this->Programming_Final_Grade->Size = System::Drawing::Size(92, 22);
+			this->Programming_Final_Grade->TabIndex = 47;
+			this->Programming_Final_Grade->Visible = false;
 			// 
-			// textBox7
+			// Programming_Final_Grade_Label
 			// 
-			this->textBox7->Location = System::Drawing::Point(652, 398);
-			this->textBox7->Name = L"textBox7";
-			this->textBox7->Size = System::Drawing::Size(135, 22);
-			this->textBox7->TabIndex = 38;
-			this->textBox7->Visible = false;
-			this->textBox7->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &Login_Screen::textBox7_KeyPress);
-			// 
-			// textBox8
-			// 
-			this->textBox8->Location = System::Drawing::Point(795, 398);
-			this->textBox8->Name = L"textBox8";
-			this->textBox8->Size = System::Drawing::Size(104, 22);
-			this->textBox8->TabIndex = 39;
-			this->textBox8->Visible = false;
-			this->textBox8->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &Login_Screen::textBox8_KeyPress);
-			// 
-			// textBox9
-			// 
-			this->textBox9->Location = System::Drawing::Point(942, 398);
-			this->textBox9->Name = L"textBox9";
-			this->textBox9->Size = System::Drawing::Size(92, 22);
-			this->textBox9->TabIndex = 40;
-			this->textBox9->Visible = false;
-			// 
-			// label19
-			// 
-			this->label19->AutoSize = true;
-			this->label19->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(186)));
-			this->label19->Location = System::Drawing::Point(395, 423);
-			this->label19->Name = L"label19";
-			this->label19->Size = System::Drawing::Size(136, 18);
-			this->label19->TabIndex = 41;
-			this->label19->Text = L"Laboratory [30%]";
-			this->label19->Visible = false;
-			// 
-			// label20
-			// 
-			this->label20->AutoSize = true;
-			this->label20->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(186)));
-			this->label20->Location = System::Drawing::Point(546, 422);
-			this->label20->Name = L"label20";
-			this->label20->Size = System::Drawing::Size(122, 18);
-			this->label20->TabIndex = 42;
-			this->label20->Text = L"Mid-Term[20%]";
-			this->label20->Visible = false;
-			// 
-			// label21
-			// 
-			this->label21->AutoSize = true;
-			this->label21->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(186)));
-			this->label21->Location = System::Drawing::Point(691, 423);
-			this->label21->Name = L"label21";
-			this->label21->Size = System::Drawing::Size(97, 18);
-			this->label21->TabIndex = 43;
-			this->label21->Text = L"Exam [50%]";
-			this->label21->Visible = false;
-			// 
-			// textBox10
-			// 
-			this->textBox10->Location = System::Drawing::Point(396, 444);
-			this->textBox10->Name = L"textBox10";
-			this->textBox10->Size = System::Drawing::Size(141, 22);
-			this->textBox10->TabIndex = 44;
-			this->textBox10->Visible = false;
-			this->textBox10->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &Login_Screen::textBox10_KeyPress);
-			// 
-			// textBox11
-			// 
-			this->textBox11->Location = System::Drawing::Point(549, 443);
-			this->textBox11->Name = L"textBox11";
-			this->textBox11->Size = System::Drawing::Size(128, 22);
-			this->textBox11->TabIndex = 45;
-			this->textBox11->Visible = false;
-			this->textBox11->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &Login_Screen::textBox11_KeyPress);
-			// 
-			// textBox12
-			// 
-			this->textBox12->Location = System::Drawing::Point(694, 443);
-			this->textBox12->Name = L"textBox12";
-			this->textBox12->Size = System::Drawing::Size(101, 22);
-			this->textBox12->TabIndex = 46;
-			this->textBox12->Visible = false;
-			this->textBox12->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &Login_Screen::textBox12_KeyPress);
-			// 
-			// textBox13
-			// 
-			this->textBox13->Location = System::Drawing::Point(942, 443);
-			this->textBox13->Name = L"textBox13";
-			this->textBox13->Size = System::Drawing::Size(92, 22);
-			this->textBox13->TabIndex = 47;
-			this->textBox13->Visible = false;
-			// 
-			// label22
-			// 
-			this->label22->AutoSize = true;
-			this->label22->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(186)));
-			this->label22->Location = System::Drawing::Point(942, 422);
-			this->label22->Name = L"label22";
-			this->label22->Size = System::Drawing::Size(95, 18);
-			this->label22->TabIndex = 48;
-			this->label22->Text = L"Final Grade";
-			this->label22->Visible = false;
+			this->Programming_Final_Grade_Label->AutoSize = true;
+			this->Programming_Final_Grade_Label->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9, System::Drawing::FontStyle::Bold,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(186)));
+			this->Programming_Final_Grade_Label->Location = System::Drawing::Point(942, 422);
+			this->Programming_Final_Grade_Label->Name = L"Programming_Final_Grade_Label";
+			this->Programming_Final_Grade_Label->Size = System::Drawing::Size(95, 18);
+			this->Programming_Final_Grade_Label->TabIndex = 48;
+			this->Programming_Final_Grade_Label->Text = L"Final Grade";
+			this->Programming_Final_Grade_Label->Visible = false;
 			// 
 			// Login_Screen
 			// 
@@ -649,52 +707,52 @@ namespace Students_Marks_Average_Calculator {
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::Bisque;
 			this->ClientSize = System::Drawing::Size(1382, 653);
-			this->Controls->Add(this->label22);
-			this->Controls->Add(this->textBox13);
-			this->Controls->Add(this->textBox12);
-			this->Controls->Add(this->textBox11);
-			this->Controls->Add(this->textBox10);
-			this->Controls->Add(this->label21);
-			this->Controls->Add(this->label20);
-			this->Controls->Add(this->label19);
-			this->Controls->Add(this->textBox9);
-			this->Controls->Add(this->textBox8);
-			this->Controls->Add(this->textBox7);
-			this->Controls->Add(this->textBox6);
-			this->Controls->Add(this->textBox5);
-			this->Controls->Add(this->label18);
-			this->Controls->Add(this->label17);
-			this->Controls->Add(this->label16);
-			this->Controls->Add(this->label15);
-			this->Controls->Add(this->label14);
-			this->Controls->Add(this->button6);
-			this->Controls->Add(this->label13);
-			this->Controls->Add(this->label12);
-			this->Controls->Add(this->button5);
-			this->Controls->Add(this->label11);
-			this->Controls->Add(this->textBox4);
-			this->Controls->Add(this->label10);
-			this->Controls->Add(this->label9);
-			this->Controls->Add(this->label8);
-			this->Controls->Add(this->textBox3);
-			this->Controls->Add(this->textBox2);
-			this->Controls->Add(this->textBox1);
-			this->Controls->Add(this->label7);
-			this->Controls->Add(this->comboBox5);
-			this->Controls->Add(this->label6);
-			this->Controls->Add(this->button4);
-			this->Controls->Add(this->label5);
-			this->Controls->Add(this->progressBar1);
-			this->Controls->Add(this->button3);
-			this->Controls->Add(this->button1);
+			this->Controls->Add(this->Programming_Final_Grade_Label);
+			this->Controls->Add(this->Programming_Final_Grade);
+			this->Controls->Add(this->Programming_Exam_Grade);
+			this->Controls->Add(this->Programming_Mid_Term_Grade);
+			this->Controls->Add(this->Programming_Laboratory_Grade);
+			this->Controls->Add(this->Programming_Exam_Label);
+			this->Controls->Add(this->Programming_Mid_Term_Label);
+			this->Controls->Add(this->Programming_Laboratory_Label);
+			this->Controls->Add(this->Math_Final_Grade);
+			this->Controls->Add(this->Math_Exam_Grade);
+			this->Controls->Add(this->Math_Mid_Term_Grade);
+			this->Controls->Add(this->Math_Test2_Grade);
+			this->Controls->Add(this->Math_Test1_Grade);
+			this->Controls->Add(this->Math_Exam_Label);
+			this->Controls->Add(this->Math_Final_Grade_Label);
+			this->Controls->Add(this->Math_Mid_Term_Label);
+			this->Controls->Add(this->Math_Test2_Label);
+			this->Controls->Add(this->Math_Test1_Label);
+			this->Controls->Add(this->Right_Lectures_Button);
+			this->Controls->Add(this->Right_Lectures);
+			this->Controls->Add(this->Calculate_Grades);
+			this->Controls->Add(this->Calculate_Grades_Button);
+			this->Controls->Add(this->Informatics_Final_Grade_Label);
+			this->Controls->Add(this->Informatics_Final_Grade);
+			this->Controls->Add(this->Informatics_Exam_Label);
+			this->Controls->Add(this->Informatics_Mid_Term_Label);
+			this->Controls->Add(this->Informatics_Laboratory_Label);
+			this->Controls->Add(this->Informatics_Exam_Grade);
+			this->Controls->Add(this->Informatics_Mid_Term_Grade);
+			this->Controls->Add(this->Informatics_Laboratory_Grade);
+			this->Controls->Add(this->Studies_Label);
+			this->Controls->Add(this->Form2_Studies_ComboBox);
+			this->Controls->Add(this->Right_Information);
+			this->Controls->Add(this->Right_Information_Button);
+			this->Controls->Add(this->Lectures_List);
+			this->Controls->Add(this->Form2_DefaultInformation_ProgressBar);
+			this->Controls->Add(this->Back_Button);
+			this->Controls->Add(this->Exit_Button);
 			this->Controls->Add(this->comboBox4);
-			this->Controls->Add(this->label4);
-			this->Controls->Add(this->comboBox3);
-			this->Controls->Add(this->label3);
-			this->Controls->Add(this->comboBox2);
-			this->Controls->Add(this->label2);
-			this->Controls->Add(this->comboBox1);
-			this->Controls->Add(this->label1);
+			this->Controls->Add(this->Semester_Label);
+			this->Controls->Add(this->Form2_Course_ComboBox);
+			this->Controls->Add(this->Course_Label);
+			this->Controls->Add(this->Form2_Faculty_ComboBox);
+			this->Controls->Add(this->Form2_University_Label);
+			this->Controls->Add(this->Form2_University_ComboBox);
+			this->Controls->Add(this->Faculty_Label);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedDialog;
 			this->Name = L"Login_Screen";
 			this->Text = L"Login_Screen";
@@ -703,95 +761,7 @@ namespace Students_Marks_Average_Calculator {
 
 		}
 #pragma endregion
-private: System::Void comboBox1_SelectedIndexChanged(System::Object^  sender, System::EventArgs^  e) {
-	if (progressBar1->Value == 0)
-	{
-		progressBar1->Value += 20;
-	}
-	if (progressBar1->Value == 20)
-	{
-		progressBar1->Value -= 20;
-		progressBar1->Value += 20;
-	}
-
-}
-private: System::Void comboBox2_SelectedIndexChanged(System::Object^  sender, System::EventArgs^  e) {
-	if (comboBox2->Text == "Economics and Management")
-	{
-		MessageBox::Show("Work in progress");
-	}
-	if (comboBox2->Text == "Natural Sciences")
-	{
-		MessageBox::Show("Work in progress");
-	}
-	if (comboBox2->Text == "Humanities")
-	{
-		MessageBox::Show("Work in progress");
-	}
-	if (comboBox2->Text == "Catholic Theology")
-	{
-		MessageBox::Show("Work in progress");
-	}
-	if (comboBox2->Text == "Arts")
-	{
-		MessageBox::Show("Work in progress");
-	}
-	if (comboBox2->Text == "Music Academy")
-	{
-		MessageBox::Show("Work in progress");
-	}
-	if (comboBox2->Text == "Political Science and Diplomacy")
-	{
-		MessageBox::Show("Work in progress");
-	}
-	if (comboBox2->Text == "Social Sciences")
-	{
-		MessageBox::Show("Work in progress");
-	}
-	if (comboBox2->Text == "Law")
-	{
-		MessageBox::Show("Work in progress");
-	}
-	if (comboBox2->Text == "Informatics")
-	{
-		if (progressBar1->Value == 20)
-		{
-			progressBar1->Value += 20;
-		}
-		if (progressBar1->Value == 40)
-		{
-			progressBar1->Value -= 20;
-			progressBar1->Value += 20;
-		}
-	}
-}
-private: System::Void comboBox3_SelectedIndexChanged(System::Object^  sender, System::EventArgs^  e) {
-	if (comboBox3->Text == "I")
-	{
-		if (progressBar1->Value == 60)
-		{
-			progressBar1->Value += 20;
-		}
-		if (progressBar1->Value == 80)
-		{
-			progressBar1->Value -= 20;
-			progressBar1->Value += 20;
-		}
-	}
-	if (comboBox3->Text == "II")
-	{
-		MessageBox::Show("Work in progress");
-	}
-	if (comboBox3->Text == "III")
-	{
-		MessageBox::Show("Work in progress");
-	}
-	if (comboBox3->Text == "IV")
-	{
-		MessageBox::Show("Work in progress");
-	}
-}
-private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
+private: System::Void Exit_Button_Click(System::Object^  sender, System::EventArgs^  e) {
 	Application::Exit();
 }
 private: System::Void comboBox4_SelectedIndexChanged(System::Object^  sender, System::EventArgs^  e) {
@@ -799,29 +769,29 @@ private: System::Void comboBox4_SelectedIndexChanged(System::Object^  sender, Sy
 	{
 		MessageBox::Show("Work in progress");
 	}
-	if (progressBar1->Value == 80)
+	if (Form2_DefaultInformation_ProgressBar->Value == 80)
 	{
-		progressBar1->Value += 20;
+		Form2_DefaultInformation_ProgressBar->Value += 20;
 	}
-	if (progressBar1->Value == 100)
+	if (Form2_DefaultInformation_ProgressBar->Value == 100)
 	{
-		progressBar1->Value -= 20;
-		progressBar1->Value += 20;
+		Form2_DefaultInformation_ProgressBar->Value -= 20;
+		Form2_DefaultInformation_ProgressBar->Value += 20;
 	}
 }
-	private: System::Void button4_Click(System::Object^  sender, System::EventArgs^  e) {
-		if (progressBar1->Value == 100)
+	private: System::Void Right_Information_Button_Click(System::Object^  sender, System::EventArgs^  e) {
+		if (Form2_DefaultInformation_ProgressBar->Value == 100)
 		{
-			label5->Show();
+			Lectures_List->Show();
 		}
-		if (comboBox1->Text == "VDU (Vytautas Magnus University)" && comboBox2->Text == "Informatics" && comboBox5->Text == "Informatics Systems" && comboBox3->Text == "I"&& comboBox4->Text == "Autumn")
+		if (Form2_University_ComboBox->Text == "VDU (Vytautas Magnus University)" && Form2_Faculty_ComboBox->Text == "Informatics" && Form2_Studies_ComboBox->Text == "Informatics Systems" && Form2_Course_ComboBox->Text == "I"&& comboBox4->Text == "Autumn")
 		{
 		System::Windows::Forms::ComboBox ^ comboBox8 = (gcnew System::Windows::Forms::ComboBox());;
 		comboBox8->DropDownWidth = 200;
 		comboBox8->FormattingEnabled = true;
 		comboBox8->Items->AddRange(gcnew cli::array< System::Object^  >(1) { L"INFN1004 Informatics" });
 		comboBox8->Location = System::Drawing::Point(15, 285);
-		comboBox8->Name = L"comboBox8";
+		comboBox8->Name = L"Lecture_1_ComboBox";
 		comboBox8->Size = System::Drawing::Size(185, 24);
 		comboBox8->TabIndex = 7;
 		this->Controls->Add(comboBox8);
@@ -831,7 +801,7 @@ private: System::Void comboBox4_SelectedIndexChanged(System::Object^  sender, Sy
 		comboBox6->FormattingEnabled = true;
 		comboBox6->Items->AddRange(gcnew cli::array< System::Object^  >(1) { L"MAT1021 Math 1" });
 		comboBox6->Location = System::Drawing::Point(15, 320);
-		comboBox6->Name = L"comboBox6";
+		comboBox6->Name = L"Lecture_2_ComboBox";
 		comboBox6->Size = System::Drawing::Size(185, 24);
 		comboBox6->TabIndex = 7;
 		this->Controls->Add(comboBox6);
@@ -841,227 +811,216 @@ private: System::Void comboBox4_SelectedIndexChanged(System::Object^  sender, Sy
 		comboBox7->FormattingEnabled = true;
 		comboBox7->Items->AddRange(gcnew cli::array< System::Object^  >(1) { L"INFN1003 Fundamentals of Programming" });
 		comboBox7->Location = System::Drawing::Point(15, 355);
-		comboBox7->Name = L"comboBox7";
+		comboBox7->Name = L"Lecture_3_ComboBox";
 		comboBox7->Size = System::Drawing::Size(185, 24);
 		comboBox7->TabIndex = 7;
 		this->Controls->Add(comboBox7);
 		//
-		button6->Show();
-		label13->Show();
+		Right_Lectures_Button->Show();
+		Right_Lectures->Show();
 	}
 }
-private: System::Void button3_Click(System::Object^  sender, System::EventArgs^  e) {
+private: System::Void Back_Button_Click(System::Object^  sender, System::EventArgs^  e) {
 	main->Show();
 	this->Hide();
 }
-private: System::Void comboBox5_SelectedIndexChanged(System::Object^  sender, System::EventArgs^  e) {
-	if (progressBar1->Value == 40)
+private: System::Void Informatics_Laboratory_Grade_KeyPress(System::Object^  sender, System::Windows::Forms::KeyPressEventArgs^  e) {
+	for (int i = 0; i < Informatics_Laboratory_Grade->TextLength; i++)
 	{
-		progressBar1->Value += 20;
-	}
-	if (progressBar1->Value == 60)
-	{
-		progressBar1->Value -= 20;
-		progressBar1->Value += 20;
-	}
-}
-private: System::Void textBox1_KeyPress(System::Object^  sender, System::Windows::Forms::KeyPressEventArgs^  e) {
-	for (int i = 0; i < textBox1->TextLength; i++)
-	{
-		textBox1->MaxLength = 2;
-		if (!isdigit(textBox1->Text[i]))
+		Informatics_Laboratory_Grade->MaxLength = 2;
+		if (!isdigit(Informatics_Laboratory_Grade->Text[i]))
 		{
-			textBox1->Text = "";
+			Informatics_Laboratory_Grade->Text = "";
 			MessageBox::Show("Wrong input");
 		}
 	}
 }
 private: System::Void button6_Click(System::Object^  sender, System::EventArgs^  e) {
-	label12->Show();
-	button5->Show();
-	label8->Show();
-	label9->Show();
-	label10->Show();
-	label11->Show();
-	textBox1->Show();
-	textBox2->Show();
-	textBox3->Show();
-	textBox4->Show();
-	textBox5->Show();
-	textBox6->Show();
-	textBox7->Show();
-	textBox8->Show();
-	textBox9->Show();
-	textBox10->Show();
-	textBox11->Show();
-	textBox12->Show();
-	textBox13->Show();
-	label14->Show();
-	label15->Show();
-	label16->Show();
-	label17->Show();
-	label18->Show();
-	label19->Show();
-	label20->Show();
-	label21->Show();
-	label22->Show();
+	Calculate_Grades->Show();
+	Calculate_Grades_Button->Show();
+	Informatics_Laboratory_Label->Show();
+	Informatics_Mid_Term_Label->Show();
+	Informatics_Exam_Label->Show();
+	Informatics_Final_Grade_Label->Show();
+	Informatics_Laboratory_Grade->Show();
+	Informatics_Mid_Term_Grade->Show();
+	Informatics_Exam_Grade->Show();
+	Informatics_Final_Grade->Show();
+	Math_Test1_Grade->Show();
+	Math_Test2_Grade->Show();
+	Math_Mid_Term_Grade->Show();
+	Math_Exam_Grade->Show();
+	Math_Final_Grade->Show();
+	Programming_Laboratory_Grade->Show();
+	Programming_Mid_Term_Grade->Show();
+	Programming_Exam_Grade->Show();
+	Programming_Final_Grade->Show();
+	Math_Test1_Label->Show();
+	Math_Test2_Label->Show();
+	Math_Mid_Term_Label->Show();
+	Math_Final_Grade_Label->Show();
+	Math_Exam_Label->Show();
+	Programming_Laboratory_Label->Show();
+	Programming_Mid_Term_Label->Show();
+	Programming_Exam_Label->Show();
+	Programming_Final_Grade_Label->Show();
 }
-private: System::Void textBox2_KeyPress(System::Object^  sender, System::Windows::Forms::KeyPressEventArgs^  e) {
-	for (int i = 0; i < textBox2->TextLength; i++)
+private: System::Void Informatics_Mid_Term_Grade_KeyPress(System::Object^  sender, System::Windows::Forms::KeyPressEventArgs^  e) {
+	for (int i = 0; i < Informatics_Mid_Term_Grade->TextLength; i++)
 	{
-		textBox2->MaxLength = 2;
-		if (!isdigit(textBox2->Text[i]))
+		Informatics_Mid_Term_Grade->MaxLength = 2;
+		if (!isdigit(Informatics_Mid_Term_Grade->Text[i]))
 		{
-			textBox2->Text = "";
+			Informatics_Mid_Term_Grade->Text = "";
 			MessageBox::Show("Wrong input");
 		}
 	}
 }
-private: System::Void textBox3_KeyPress(System::Object^  sender, System::Windows::Forms::KeyPressEventArgs^  e) {
-	for (int i = 0; i < textBox3->TextLength; i++)
+private: System::Void Informatics_Exam_Grade_KeyPress(System::Object^  sender, System::Windows::Forms::KeyPressEventArgs^  e) {
+	for (int i = 0; i < Informatics_Exam_Grade->TextLength; i++)
 	{
-		textBox3->MaxLength = 2;
-		if (!isdigit(textBox3->Text[i]))
+		Informatics_Exam_Grade->MaxLength = 2;
+		if (!isdigit(Informatics_Exam_Grade->Text[i]))
 		{
-			textBox3->Text = "";
+			Informatics_Exam_Grade->Text = "";
 			MessageBox::Show("Wrong input");
 		}
 	}
 }
-private: System::Void textBox5_KeyPress(System::Object^  sender, System::Windows::Forms::KeyPressEventArgs^  e) {
-	for (int i = 0; i < textBox5->TextLength; i++)
+private: System::Void Math_Test1_Grade_KeyPress(System::Object^  sender, System::Windows::Forms::KeyPressEventArgs^  e) {
+	for (int i = 0; i < Math_Test1_Grade->TextLength; i++)
 	{
-		textBox5->MaxLength = 2;
-		if (!isdigit(textBox5->Text[i]))
+		Math_Test1_Grade->MaxLength = 2;
+		if (!isdigit(Math_Test1_Grade->Text[i]))
 		{
-			textBox5->Text = "";
+			Math_Test1_Grade->Text = "";
 			MessageBox::Show("Wrong input");
 		}
 	}
 }
-private: System::Void textBox6_KeyPress(System::Object^  sender, System::Windows::Forms::KeyPressEventArgs^  e) {
-	for (int i = 0; i < textBox6->TextLength; i++)
+private: System::Void Math_Test2_Grade_KeyPress(System::Object^  sender, System::Windows::Forms::KeyPressEventArgs^  e) {
+	for (int i = 0; i < Math_Test2_Grade->TextLength; i++)
 	{
-		textBox6->MaxLength = 2;
-		if (!isdigit(textBox6->Text[i]))
+		Math_Test2_Grade->MaxLength = 2;
+		if (!isdigit(Math_Test2_Grade->Text[i]))
 		{
-			textBox6->Text = "";
+			Math_Test2_Grade->Text = "";
 			MessageBox::Show("Wrong input");
 		}
 	}
 }
-private: System::Void textBox7_KeyPress(System::Object^  sender, System::Windows::Forms::KeyPressEventArgs^  e) {
-	for (int i = 0; i < textBox7->TextLength; i++)
+private: System::Void Math_Mid_Term_Grade_KeyPress(System::Object^  sender, System::Windows::Forms::KeyPressEventArgs^  e) {
+	for (int i = 0; i < Math_Mid_Term_Grade->TextLength; i++)
 	{
-		textBox7->MaxLength = 2;
-		if (!isdigit(textBox7->Text[i]))
+		Math_Mid_Term_Grade->MaxLength = 2;
+		if (!isdigit(Math_Mid_Term_Grade->Text[i]))
 		{
-			textBox7->Text = "";
+			Math_Mid_Term_Grade->Text = "";
 			MessageBox::Show("Wrong input");
 		}
 	}
 }
-private: System::Void textBox8_KeyPress(System::Object^  sender, System::Windows::Forms::KeyPressEventArgs^  e) {
-	for (int i = 0; i < textBox8->TextLength; i++)
+private: System::Void Math_Exam_Grade_KeyPress(System::Object^  sender, System::Windows::Forms::KeyPressEventArgs^  e) {
+	for (int i = 0; i < Math_Exam_Grade->TextLength; i++)
 	{
-		textBox8->MaxLength = 2;
-		if (!isdigit(textBox8->Text[i]))
+		Math_Exam_Grade->MaxLength = 2;
+		if (!isdigit(Math_Exam_Grade->Text[i]))
 		{
-			textBox8->Text = "";
+			Math_Exam_Grade->Text = "";
 			MessageBox::Show("Wrong input");
 		}
 	}
 }
-private: System::Void textBox10_KeyPress(System::Object^  sender, System::Windows::Forms::KeyPressEventArgs^  e) {
-	for (int i = 0; i < textBox10->TextLength; i++)
+private: System::Void Programming_Laboratory_Grade_KeyPress(System::Object^  sender, System::Windows::Forms::KeyPressEventArgs^  e) {
+	for (int i = 0; i < Programming_Laboratory_Grade->TextLength; i++)
 	{
-		textBox10->MaxLength = 2;
-		if (!isdigit(textBox10->Text[i]))
+		Programming_Laboratory_Grade->MaxLength = 2;
+		if (!isdigit(Programming_Laboratory_Grade->Text[i]))
 		{
-			textBox10->Text = "";
+			Programming_Laboratory_Grade->Text = "";
 			MessageBox::Show("Wrong input");
 		}
 	}
 }
-private: System::Void textBox11_KeyPress(System::Object^  sender, System::Windows::Forms::KeyPressEventArgs^  e) {
-	for (int i = 0; i < textBox11->TextLength; i++)
+private: System::Void Programming_Mid_Term_Grade_KeyPress(System::Object^  sender, System::Windows::Forms::KeyPressEventArgs^  e) {
+	for (int i = 0; i < Programming_Mid_Term_Grade->TextLength; i++)
 	{
-		textBox11->MaxLength = 2;
-		if (!isdigit(textBox11->Text[i]))
+		Programming_Mid_Term_Grade->MaxLength = 2;
+		if (!isdigit(Programming_Mid_Term_Grade->Text[i]))
 		{
-			textBox11->Text = "";
+			Programming_Mid_Term_Grade->Text = "";
 			MessageBox::Show("Wrong input");
 		}
 	}
 }
-private: System::Void textBox12_KeyPress(System::Object^  sender, System::Windows::Forms::KeyPressEventArgs^  e) {
-	for (int i = 0; i < textBox12->TextLength; i++)
+private: System::Void Programming_Exam_Grade_KeyPress(System::Object^  sender, System::Windows::Forms::KeyPressEventArgs^  e) {
+	for (int i = 0; i < Programming_Exam_Grade->TextLength; i++)
 	{
-		textBox12->MaxLength = 2;
-		if (!isdigit(textBox12->Text[i]))
+		Programming_Exam_Grade->MaxLength = 2;
+		if (!isdigit(Programming_Exam_Grade->Text[i]))
 		{
-			textBox12->Text = "";
+			Programming_Exam_Grade->Text = "";
 			MessageBox::Show("Wrong input");
 		}
 	}
 }
-private: System::Void button5_Click(System::Object^  sender, System::EventArgs^  e) {
+private: void Informatics_Errors(bool Informatics_Condition, System::String Errors_Messages){
+	if(Informatics_Condition)
+		{
+			MessageBox::Show(Errors_Messages);
+			/*MessageBox::Show("Informatics Labarotory mark wrong input. Input must be less or equal to 10");
+			MessageBox::Show("Informatics Mid-Term mark wrong input. Input must be less or equal to 10");
+			MessageBox::Show("Informatics Exam mark wrong input. Input must be less or equal to 10");*/
+		}
+	}
+private: System::Void Calculate_Grades_Button_Click(System::Object^  sender, System::EventArgs^  e) {
 	int InfLab;
-	InfLab = System::Convert::ToInt32(textBox1->Text);
-	if (InfLab > 10 )
-	{
-		MessageBox::Show("Informatics Labarotory mark wrong input. Input must be less or equal to 10");
-	}
+	InfLab = System::Convert::ToInt32(Informatics_Laboratory_Grade->Text);
 	int InfMid;
-	InfMid = System::Convert::ToInt32(textBox2->Text);
-	if (InfMid > 10 )
-	{
-		MessageBox::Show("Informatics Mid-Term mark wrong input. Input must be less or equal to 10");
-	}
+	InfMid = System::Convert::ToInt32(Informatics_Mid_Term_Grade->Text);
 	int InfExa;
-	InfExa = System::Convert::ToInt32(textBox3->Text);
-	if (InfExa > 10)
-	{
-		MessageBox::Show("Informatics Exam mark wrong input. Input must be less or equal to 10");
-	}
+	InfExa = System::Convert::ToInt32(Informatics_Exam_Grade->Text);
+	Informatics_Errors(InfLab > 10, L"Informatics Labarotory mark wrong input. Input must be less or equal to 10");
+	Informatics_Errors(InfMid > 10, L"Informatics Mid-Term mark wrong input. Input must be less or equal to 10");
+	Informatics_Errors(InfExa > 10, L"Informatics Exam mark wrong input. Input must be less or equal to 10");
 	int MathTest1;
-	MathTest1 = System::Convert::ToInt32(textBox5->Text);
+	MathTest1 = System::Convert::ToInt32(Math_Test1_Grade->Text);
 	if (MathTest1 > 10)
 	{
 		MessageBox::Show("Math Test 1 mark wrong input. Input must be less or equal to 10");
 	}
 	int MathTest2;
-	MathTest2 = System::Convert::ToInt32(textBox6->Text);
+	MathTest2 = System::Convert::ToInt32(Math_Test2_Grade->Text);
 	if (MathTest2 > 10)
 	{
 		MessageBox::Show("Math Test 2 mark wrong input. Input must be less or equal to 10");
 	}
 	int MathMid;
-	MathMid = System::Convert::ToInt32(textBox7->Text);
+	MathMid = System::Convert::ToInt32(Math_Mid_Term_Grade->Text);
 	if (MathMid > 10)
 	{
 		MessageBox::Show("Math Mid-Term mark wrong input. Input must be less or equal to 10");
 	}
 	int MathExam;
-	MathExam = System::Convert::ToInt32(textBox8->Text);
+	MathExam = System::Convert::ToInt32(Math_Exam_Grade->Text);
 	if (MathExam > 10)
 	{
 		MessageBox::Show("Math Exam mark wrong input. Input must be less or equal to 10");
 	}
 	int ProgLab;
-	ProgLab = System::Convert::ToInt32(textBox10->Text);
+	ProgLab = System::Convert::ToInt32(Programming_Laboratory_Grade->Text);
 	if (ProgLab > 10)
 	{
 		MessageBox::Show("Programming Labarotory mark wrong input. Input must be less or equal to 10");
 	}
 	int ProgMid;
-	ProgMid = System::Convert::ToInt32(textBox11->Text);
+	ProgMid = System::Convert::ToInt32(Programming_Mid_Term_Grade->Text);
 	if (ProgMid > 10)
 	{
 		MessageBox::Show("Programming Mid-Term mark wrong input. Input must be less or equal to 10");
 	}
 	int ProgExam;
-	ProgExam = System::Convert::ToInt32(textBox12->Text);
+	ProgExam = System::Convert::ToInt32(Programming_Exam_Grade->Text);
 	if (ProgExam > 10)
 	{
 		MessageBox::Show("Programming Exam mark wrong input. Input must be less or equal to 10");
@@ -1070,7 +1029,7 @@ private: System::Void button5_Click(System::Object^  sender, System::EventArgs^ 
 	{
 	int InfFinal;
 	InfFinal = (InfLab*0.3) + (InfMid*0.2) + (InfExa*0.5);
-	textBox4->Text = System::Convert::ToString(InfFinal);
+	Informatics_Final_Grade->Text = System::Convert::ToString(InfFinal);
 	}
 	else
 	{
@@ -1080,7 +1039,7 @@ private: System::Void button5_Click(System::Object^  sender, System::EventArgs^ 
 	{
 		int MathFinal;
 		MathFinal = (MathTest1*0.125) + (MathTest2*0.125) + (MathMid*0.25) + (MathExam*0.5);
-		textBox9->Text = System::Convert::ToString(MathFinal);
+		Math_Final_Grade->Text = System::Convert::ToString(MathFinal);
 	}
 	else
 	{
@@ -1090,11 +1049,75 @@ private: System::Void button5_Click(System::Object^  sender, System::EventArgs^ 
 	{
 		int ProgFinal;
 		ProgFinal = (ProgLab*0.3) + (ProgMid*0.2) + (ProgExam*0.5);
-		textBox13->Text = System::Convert::ToString(ProgFinal);
+		Programming_Final_Grade->Text = System::Convert::ToString(ProgFinal);
 	}
 	else
 	{
 		MessageBox::Show("Bad input calculation of Programming Final Grade is not aviable");
+	}
+}
+private: System::Void Form2_University_ComboBox_SelectedIndexChanged(System::Object^  sender, System::EventArgs^  e) {
+	if (Form2_DefaultInformation_ProgressBar->Value == 0)
+	{
+		Form2_DefaultInformation_ProgressBar->Value += 20;
+	}
+	if (Form2_DefaultInformation_ProgressBar->Value == 20)
+	{
+		Form2_DefaultInformation_ProgressBar->Value -= 20;
+		Form2_DefaultInformation_ProgressBar->Value += 20;
+	}
+
+}
+private: System::Void Form2_Faculty_ComboBox_SelectedIndexChanged(System::Object^  sender, System::EventArgs^  e) {
+	switch (Form2_Faculty_ComboBox->Text != "Informatics")
+	{
+	case 1:
+		MessageBox::Show("Work in progress");
+		break;
+	}
+	if (Form2_Faculty_ComboBox->Text == "Informatics")
+	{
+		if (Form2_DefaultInformation_ProgressBar->Value == 20)
+		{
+			Form2_DefaultInformation_ProgressBar->Value += 20;
+		}
+		if (Form2_DefaultInformation_ProgressBar->Value == 40)
+		{
+			Form2_DefaultInformation_ProgressBar->Value -= 20;
+			Form2_DefaultInformation_ProgressBar->Value += 20;
+		}
+	}
+}
+private: System::Void Form2_Studies_ComboBox_SelectedIndexChanged(System::Object^  sender, System::EventArgs^  e) {
+	if (Form2_DefaultInformation_ProgressBar->Value == 40)
+	{
+		Form2_DefaultInformation_ProgressBar->Value += 20;
+	}
+	if (Form2_DefaultInformation_ProgressBar->Value == 60)
+	{
+		Form2_DefaultInformation_ProgressBar->Value -= 20;
+		Form2_DefaultInformation_ProgressBar->Value += 20;
+	}
+}
+private: System::Void Form2_Course_ComboBox_SelectedIndexChanged(System::Object^  sender, System::EventArgs^  e) {
+	if (Form2_Course_ComboBox->Text == "I")
+	{
+
+		if (Form2_DefaultInformation_ProgressBar->Value == 60)
+		{
+			Form2_DefaultInformation_ProgressBar->Value += 20;
+		}
+		if (Form2_DefaultInformation_ProgressBar->Value == 80)
+		{
+			Form2_DefaultInformation_ProgressBar->Value -= 20;
+			Form2_DefaultInformation_ProgressBar->Value += 20;
+		}
+	}
+	switch (Form2_Course_ComboBox->Text != "I")
+	{
+	case 1:
+		MessageBox::Show("Work in progress");
+		break;
 	}
 }
 };
